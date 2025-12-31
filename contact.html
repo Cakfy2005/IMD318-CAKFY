@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CAKFY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">CAKFY</div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><span class="nav-icon"><i class="fas fa-home"></i></span><span class="nav-text">Home</span></a></li>
+                <li><a href="about.html"><span class="nav-icon"><i class="fas fa-user"></i></span><span class="nav-text">About Me</span></a></li>
+                <li><a href="experience.html"><span class="nav-icon"><i class="fas fa-briefcase"></i></span><span class="nav-text">Experience</span></a></li>
+                <li><a href="education.html"><span class="nav-icon"><i class="fas fa-graduation-cap"></i></span><span class="nav-text">Education</span></a></li>
+                <li><a href="beloved.html"><span class="nav-icon"><i class="fas fa-heart"></i></span><span class="nav-text">Beloved</span></a></li>
+                <li><a href="gallery.html"><span class="nav-icon"><i class="fas fa-camera"></i></span><span class="nav-text">Gallery</span></a></li>
+                <li><a href="contact.html" class="active"><span class="nav-icon"><i class="fas fa-envelope"></i></span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Contact Me</h1>
+        <p>Let's connect and stay in touch!</p>
+    </section>
+
+    <section class="contact-modern-section">
+        <div class="container">
+            <div class="contact-info-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon"><i class="fas fa-at"></i></div>
+                    <h3>Email</h3>
+                    <p>nizam290705@gmail.com</p>
+                    <a href="mailto:nizam290705@gmail.com" class="contact-link">Send Email</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon"><i class="fas fa-mobile-screen"></i></div>
+                    <h3>Phone</h3>
+                    <p>+60 134184726</p>
+                    <a href="tel:+60134184726" class="contact-link">Call Now</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon"><i class="fas fa-location-dot"></i></div>
+                    <h3>Location</h3>
+                    <p>Alor Setar, Kedah, Malaysia</p>
+                    <span class="contact-link">Available Worldwide</span>
+                </div>
+            </div>
+
+            <div class="social-media-section-modern">
+                <h2 class="section-title"><i class="fas fa-globe"></i> Connect With Me</h2>
+                <div class="social-cards-grid">
+                    <a href="https://tiktok.com/@cakffyy" target="_blank" class="social-modern-card tiktok">
+                        <div class="social-logo">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <h3>TikTok</h3>
+                        <p>@cakffyy</p>
+                        <span class="follow-btn">Follow Me</span>
+                    </a>
+
+                    <a href="https://facebook.com/mohamadshahrul.nizam.963" target="_blank" class="social-modern-card facebook">
+                        <div class="social-logo">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <h3>Facebook</h3>
+                        <p>Mohamad Shahrul Nizam</p>
+                        <span class="follow-btn">Add Friend</span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/mohamad-shahrul-nizam-bin-mohd-rohim-3a5940368" target="_blank" class="social-modern-card linkedin">
+                        <div class="social-logo">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>MOHAMAD SHAHRUL NIZAM BIN MOHD ROHIM</p>
+                        <span class="follow-btn">Connect</span>
+                    </a>
+
+                    <a href="https://instagram.com/cakfyyy" target="_blank" class="social-modern-card instagram">
+                        <div class="social-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>@cakfyyy</p>
+                        <span class="follow-btn">Follow</span>
+                    </a>
+                </div>
+            </div>
+
+           <div class="contact-form-section-modern">
+                <h2 class="section-title"><i class="fas fa-paper-plane"></i> Send Me a Message</h2>
+                <form id="contactFormModern" class="modern-contact-form">
+                    <div class="form-row">
+                        <div class="form-group-modern">
+                            <label for="contactName">
+                                <span class="label-icon"><i class="fas fa-user"></i></span> Your Name *
+                            </label>
+                            <input type="text" id="contactName" name="name" required placeholder="Enter your full name">
+                            <span class="error-msg" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="contactPhone">
+                                <span class="label-icon"><i class="fas fa-phone"></i></span> Phone Number *
+                            </label>
+                            <input type="tel" id="contactPhone" name="phone" required placeholder="+60 12-345 6789">
+                            <span class="error-msg" id="phoneError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group-modern">
+                        <label for="contactEmail">
+                            <span class="label-icon"><i class="fas fa-envelope"></i></span> Email Address *
+                        </label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="your.email@example.com">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group-modern">
+                        <label for="contactMessage">
+                            <span class="label-icon"><i class="fas fa-comment-dots"></i></span> Your Message *
+                        </label>
+                        <textarea id="contactMessage" name="message" rows="6" required placeholder="Write your message here..."></textarea>
+                        <span class="char-counter" id="charCounter">0 / 500 characters</span>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn-modern">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                    </button>
+                </form>
+            </div>
+
+            <div id="successModal" class="modal-overlay">
+                <div class="modal-content">
+                    <div class="modal-icon-container">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you! Your message has been sent successfully. I'll get back to you soon!</p>
+                    <button id="modalOkBtn" class="modal-btn">Okay</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-column brand-col">
+                    <h3 class="footer-logo">CAKFY</h3>
+                    <p class="footer-about">Information Management student at UiTM Kedah. Organizing digital knowledge with a passion for web design.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-leaf"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-leaf"></i> About Me</a></li>
+                        <li><a href="experience.html"><i class="fas fa-leaf"></i> Experience</a></li>
+                        <li><a href="education.html"><i class="fas fa-leaf"></i> Education</a></li>
+                        <li><a href="beloved.html"><i class="fas fa-leaf"></i> Beloved</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-leaf"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-leaf"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+            <div class="footer-column">
+        <h4>Connect</h4>
+        <ul class="footer-links social-links">
+            <li>
+                <a href="https://www.instagram.com/cakfyyy" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://www.tiktok.com/@cakffyy" target="_blank">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/mohamadshahrul.nizam.963" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </li>
+        </ul>
+    </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohamad Shahrul Nizam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

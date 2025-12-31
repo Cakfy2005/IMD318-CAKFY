@@ -1,0 +1,192 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - CAKFY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">CAKFY</div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><span class="nav-icon"><i class="fas fa-home"></i></span><span class="nav-text">Home</span></a></li>
+                <li><a href="about.html"><span class="nav-icon"><i class="fas fa-user"></i></span><span class="nav-text">About Me</span></a></li>
+                <li><a href="experience.html"><span class="nav-icon"><i class="fas fa-briefcase"></i></span><span class="nav-text">Experience</span></a></li>
+                <li><a href="education.html"><span class="nav-icon"><i class="fas fa-graduation-cap"></i></span><span class="nav-text">Education</span></a></li>
+                <li><a href="beloved.html"><span class="nav-icon"><i class="fas fa-heart"></i></span><span class="nav-text">Beloved</span></a></li>
+                <li><a href="gallery.html" class="active"><span class="nav-icon"><i class="fas fa-camera"></i></span><span class="nav-text">Gallery</span></a></li>
+                <li><a href="contact.html"><span class="nav-icon"><i class="fas fa-envelope"></i></span><span class="nav-text">Contact</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+<section class="page-header">
+    <h1>My Gallery</h1>
+    <p>Capturing moments and memories</p>
+</section>
+
+<section class="gallery-album-section">
+    <div class="container">
+        <div class="album-intro">
+            <h2><i class="fas fa-images"></i> Photo Album</h2>
+            <p>A collection of 9 memorable moments from my journey</p>
+        </div>
+
+        <div class="album-grid">
+            <div class="album-item" onclick="openAlbumLightbox(0)">
+                <img src="images/photo1.jpg" alt="Memory 1">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Beloved One</h3>
+                    <p>A moment before long distance relationship</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(1)">
+                <img src="images/photo2.jpg" alt="Memory 2">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Menara Condong</h3>
+                    <p>Historical monument</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(2)">
+                <img src="images/photo3.jpg" alt="Memory 3">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Museum Sarawak</h3>
+                    <p>One of the greatest museum in Malaysia</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(3)">
+                <img src="images/photo4.jpg" alt="Memory 4">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Menara Berkembar</h3>
+                    <p>Once the tallest building in Malaysia</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(4)">
+                <img src="images/photo5.jpg" alt="Memory 5">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Padang Besar</h3>
+                    <p>A place where money well spent</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(5)">
+                <img src="images/photo6.jpg" alt="Memory 6">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Time Square</h3>
+                    <p>One of the best indoor funfair ever</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(6)">
+                <img src="images/photo7.jpg" alt="Memory 7">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>The Third Accident</h3>
+                    <p>Happen because own fault</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(7)">
+                <img src="images/photo8.jpg" alt="Memory 8">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Korean Dish</h3>
+                    <p>Unique taste that hard to be forgetten</p>
+                </div>
+            </div>
+
+            <div class="album-item" onclick="openAlbumLightbox(8)">
+                <img src="images/photo9.jpg" alt="Memory 9">
+                <div class="album-overlay">
+                    <i class="fas fa-search-plus overlay-icon"></i>
+                    <h3>Ulu Lenggong</h3>
+                    <p>Activitiy that to be done every semester</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="albumLightbox" class="album-lightbox">
+    <span class="album-close" onclick="closeAlbumLightbox()"><i class="fas fa-times"></i></span>
+    <div class="album-lightbox-content">
+        <img id="albumLightboxImg" src="" alt="Album Photo">
+        <div class="album-caption">
+            <h3 id="albumTitle"></h3>
+            <p id="albumDescription"></p>
+        </div>
+    </div>
+    <button class="album-nav album-prev" onclick="changeAlbumPhoto(-1)"><i class="fas fa-chevron-left"></i></button>
+    <button class="album-nav album-next" onclick="changeAlbumPhoto(1)"><i class="fas fa-chevron-right"></i></button>
+    <div class="album-counter" id="albumCounter">1 / 9</div>
+</div>
+<footer class="footer-modern">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div class="footer-column brand-col">
+                <h3 class="footer-logo">CAKFY</h3>
+                <p class="footer-about">Information Management student at UiTM Kedah. Organizing digital knowledge with a passion for web design.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-leaf"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-leaf"></i> About Me</a></li>
+                    <li><a href="experience.html"><i class="fas fa-leaf"></i> Experience</a></li>
+                    <li><a href="education.html"><i class="fas fa-leaf"></i> Education</a></li>
+                    <li><a href="beloved.html"><i class="fas fa-leaf"></i> Beloved</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-leaf"></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class="fas fa-leaf"></i> Contact</a></li>
+                </ul>
+            </div>
+			
+           <div class="footer-column">
+    <h4>Connect</h4>
+    <ul class="footer-links social-links">
+        <li>
+            <a href="https://www.instagram.com/cakfyyy" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+        </li>
+        <li>
+            <a href="https://www.tiktok.com/@cakffyy" target="_blank">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/mohamadshahrul.nizam.963" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </li>
+    </ul>
+</div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mohamad Shahrul Nizam. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
