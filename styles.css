@@ -1384,7 +1384,7 @@ video {
 .video-speed-select {
     background: transparent;
     color: green;
-    border: none;
+    border: black;
     font-size: 0.9rem;
     cursor: pointer;
 }
@@ -2276,3 +2276,4 @@ video {
     background: var(--dark-green);
 
 }
+
