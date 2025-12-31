@@ -1,4 +1,4 @@
-// Hamburger Menu
+
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Music Player (About Page)
+
 const mySong = document.getElementById('myFavoriteSong');
 const musicToggle = document.getElementById('musicToggle');
 const mainPlayIcon = document.getElementById('mainPlayIcon');
@@ -53,7 +53,7 @@ if (mySong) {
     };
 }
 
-// Skills Animation (About Page)
+
 function animateSkills() {
     const circles = document.querySelectorAll('.circle-progress');
     const totalCircumference = 377;
@@ -73,7 +73,7 @@ function animateSkills() {
 window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
 
-// Toggle Details (Education Page)
+
 function toggleDetails(button) {
     const expandable = button.nextElementSibling;
     
@@ -86,7 +86,7 @@ function toggleDetails(button) {
     }
 }
 
-// Video Player (Beloved Page)
+
 const video = document.getElementById('favouriteVideo');
 const container = document.getElementById('videoContainer');
 const overlay = document.getElementById('videoOverlay');
@@ -161,7 +161,7 @@ if (video && overlay && playBtn) {
     });
 }
 
-// Friends Section (Beloved Page)
+
 const friendsData = [
     {
         name: "Kedah Friends",
@@ -207,7 +207,7 @@ function showFriendInfo(index) {
     }
 }
 
-// Gallery Album (Gallery Page)
+
 const albumData = [
     { src: 'images/photo1.jpg', title: 'Beloved One', desc: 'A moment before long distance relationship' },
     { src: 'images/photo2.jpg', title: 'Menara Condong', desc: 'Historical monument' },
@@ -282,19 +282,16 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-/* =========================================
-   UPDATED CONTACT FORM WITH SUCCESS POPUP
-   ========================================= */
 
 const contactFormModern = document.getElementById('contactFormModern');
 const contactMessage = document.getElementById('contactMessage');
 const charCounter = document.getElementById('charCounter');
 
-// Modal Elements
+
 const successModal = document.getElementById('successModal');
 const modalOkBtn = document.getElementById('modalOkBtn');
 
-// 1. Character Counter Logic
+
 if (contactMessage) {
     contactMessage.addEventListener('input', function() {
         const length = this.value.length;
@@ -308,33 +305,33 @@ if (contactMessage) {
     });
 }
 
-// 2. Modal Close Logic
+
 if (modalOkBtn) {
     modalOkBtn.addEventListener('click', function() {
         successModal.classList.remove('show');
     });
 }
 
-// 3. Form Submission Logic
+
 if (contactFormModern) {
     contactFormModern.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Clear previous errors
+       
         document.querySelectorAll('.error-msg').forEach(error => {
             error.textContent = '';
         });
 
         let isValid = true;
 
-        // Validation: Name
+       
         const name = document.getElementById('contactName').value.trim();
         if (name.length < 2) {
             document.getElementById('nameError').textContent = 'Name must be at least 2 characters';
             isValid = false;
         }
 
-        // Validation: Phone
+       
         const phone = document.getElementById('contactPhone').value.trim();
         const phoneRegex = /^[+]?[\d\s-]{10,}$/;
         if (!phoneRegex.test(phone)) {
@@ -342,7 +339,7 @@ if (contactFormModern) {
             isValid = false;
         }
 
-        // Validation: Email
+        
         const email = document.getElementById('contactEmail').value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
@@ -350,7 +347,7 @@ if (contactFormModern) {
             isValid = false;
         }
 
-        // Validation: Message
+        
         const message = contactMessage.value.trim();
         if (message.length < 10) {
             document.getElementById('messageError').textContent = 'Message must be at least 10 characters';
@@ -360,26 +357,26 @@ if (contactFormModern) {
             isValid = false;
         }
 
-        // If form is valid, proceed
+       
         if (isValid) {
             const submitBtn = contactFormModern.querySelector('.submit-btn-modern');
             const btnText = submitBtn.querySelector('.btn-text');
 
-            // Show loading state
+            
             btnText.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Simulate API call (2 seconds delay)
+            
             setTimeout(() => {
-                // Reset button
+                
                 btnText.textContent = 'Send Message';
                 submitBtn.disabled = false;
 
-                // Reset Form
+                
                 contactFormModern.reset();
                 charCounter.textContent = '0 / 500 characters';
 
-                // TRIGGER THE MODAL
+              
                 if (successModal) {
                     successModal.classList.add('show');
                 }
@@ -389,7 +386,7 @@ if (contactFormModern) {
     });
 }
 
-// Welcome Modal
+
 function showWelcomeModal() {
     const modal = document.createElement('div');
     modal.className = 'welcome-modal-overlay';
@@ -418,7 +415,7 @@ function closeWelcomeModal() {
     }
 }
 
-// Allow closing welcome modal with Escape key
+
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         const welcomeModal = document.querySelector('.welcome-modal-overlay');
@@ -428,14 +425,14 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Allow closing welcome modal by clicking outside
+
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('welcome-modal-overlay')) {
         closeWelcomeModal();
     }
 });
 
-// Intersection Observer for animations
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -457,7 +454,7 @@ document.querySelectorAll('.bento-box, .preview-card, .experience-card, .timelin
     observer.observe(el);
 });
 
-// Smooth scrolling for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -470,7 +467,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Back to Top Button
+
 function createBackToTopButton() {
     const button = document.createElement('button');
     button.innerHTML = '↑';
@@ -502,28 +499,25 @@ function createBackToTopButton() {
 
 createBackToTopButton();
 
-/* =========================================
-   PAGE LOAD: ONLY SHOW WELCOME ON INDEX.HTML ONCE
-   ========================================= */
+
 
 window.addEventListener('load', function() {
-    // 1. Fade in the body content for all pages
     document.body.style.opacity = '0';
     setTimeout(function() {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
         
-        // 2. CHECK: Only show modal if the user is on 'index.html' or root '/'
+        
         const path = window.location.pathname;
         
-        // Check location
+        
         if (path.endsWith('index.html') || path === '/' || path.endsWith('/')) {
             
-            // 3. SESSION STORAGE CHECK: Has the user seen it this session?
+           
             const hasSeenWelcome = sessionStorage.getItem('welcomeShown');
             
             if (!hasSeenWelcome) {
-                // If they haven't seen it, show it and set the flag
+                
                 setTimeout(function() {
                     showWelcomeModal();
                     sessionStorage.setItem('welcomeShown', 'true');
@@ -533,5 +527,6 @@ window.addEventListener('load', function() {
         
     }, 100);
 });
+
 
 console.log('🌿 CAKFY Website loaded successfully! 🌿');
