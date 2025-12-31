@@ -1330,7 +1330,7 @@ video {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    accent-color: #ff0000;
+    accent-color: green;
 }
 
 .controls-main-row {
@@ -2276,4 +2276,5 @@ video {
     background: var(--dark-green);
 
 }
+
 
