@@ -1348,7 +1348,7 @@ video {
 .video-btn {
     background: none;
     border: none;
-    color: #fff;
+    color: green;
     font-size: 1.2rem;
     cursor: pointer;
     padding: 5px;
@@ -2276,5 +2276,6 @@ video {
     background: var(--dark-green);
 
 }
+
 
 
