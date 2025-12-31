@@ -1383,7 +1383,7 @@ video {
 
 .video-speed-select {
     background: transparent;
-    color: white;
+    color: green;
     border: none;
     font-size: 0.9rem;
     cursor: pointer;
@@ -2274,4 +2274,5 @@ video {
 
 .modal-btn:hover {
     background: var(--dark-green);
+
 }
